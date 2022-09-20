@@ -1,0 +1,39 @@
+/* navbar */
+.bi-book{
+    font-size: 45px;
+    color: #D6D5C9;
+}
+.bi-book:hover{
+    color: #A22C29;
+}
+.navbar-nav{
+    font-size: 20px;
+}
+.navbar{
+    background-color: #0A100D;
+}
+.nav-link{
+    color: #D6D5C9;
+}
+.nav-link:hover{
+    color: #A22C29;
+}
+
+/* body */
+body{
+    background-color: #D6D5C9;
+}
+
+h1{
+    color: #902923;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* createLibri */
+.bntCreateLibri{
+    background-color: #B9BAA3;
+}
+.bntCreateLibri:hover{
+    background-color: #A22C29 !important;
+}
