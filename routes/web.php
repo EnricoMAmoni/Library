@@ -17,5 +17,6 @@ use App\Http\Controllers\PublicController;
 
 Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
 Route::get('/inserimentoLibri',[LibriController::class, 'createLibri'])->name('createLibri');
-
+Route::post('/inserimentoLibri/post',[LibriController::class, 'storeLibri'])->name('postLibri');
+Route::get('/inserimentoLibri/index', [LibriController::class, 'indexLibri'])->name('indexLibri');
 
