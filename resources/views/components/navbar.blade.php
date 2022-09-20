@@ -10,7 +10,7 @@
             <a class="nav-link" aria-current="page" href="{{route('welcome')}}">Home</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#">Catalogo Libri</a>
+            <a class="nav-link" href="{{route('indexLibri')}}">Catalogo Libri</a>
           </li>
           <li class="nav-item mx-2">
             <a class="nav-link" href="{{route('createLibri')}}">Inserisci Libri</a>

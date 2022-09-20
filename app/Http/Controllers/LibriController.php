@@ -20,15 +20,22 @@ class LibriController extends Controller
             'price'=>$request->input('price'),
             'synopsis'=>$request->input('synopsis'),
 
-
+            
+            
         ]);
         
+        return redirect(route('createLibri'))->with('message', 'Libro inserito');
 
     }
 
     public function indexLibri(){
-
-        return view ('indexLibri');
+        
+        $books = Book::all();
+        return view ('indexLibri', compact('books'));
 
     }
+
+   
+
+   
 }

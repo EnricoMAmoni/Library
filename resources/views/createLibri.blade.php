@@ -1,6 +1,14 @@
 <x-layout>
     <div class="container">
         <h1 class="m-5">Inserisci il libro</h1>  
+
+        @if (session('message'))
+            <div class="alert alert-warning">
+                 {{ session('message') }}
+            </div>
+        @endif
+
+
         <div class="row">
             <div class="col-7">
                 
