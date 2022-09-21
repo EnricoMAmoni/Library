@@ -10,7 +10,7 @@
             @foreach ($books as $book)
                 
             <div class="card col-12 col-md-4 mb-3 mt-3" style="width: 18rem;" >
-               <img src="https://picsum.photos/200/300/?blur" class="card-img-top" alt="libri">
+               <img src="{{Storage::url($book->img)}}" class="card-img-top" alt="libri">
                <div class="card-body">
                  <h5 class="card-title">Titolo: {{$book->title}}</h5>
                  <h5 class="card-text">Autore: {{$book->author}}</h5>
