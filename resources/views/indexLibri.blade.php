@@ -14,7 +14,7 @@
                <div class="card-body">
                  <h5 class="card-title">Titolo: {{$book->title}}</h5>
                  <h5 class="card-text">Autore: {{$book->author}}</h5>
-                 <a href="#" class="btn btn-warning">Dettaglio</a>
+                 <a href="{{route('dettaglioLibri', compact ('book'))}}" class="btn btn-warning">Dettaglio</a>
                </div>
    
             </div>

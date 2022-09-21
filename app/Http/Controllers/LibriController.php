@@ -35,6 +35,11 @@ class LibriController extends Controller
 
     }
 
+    public function dettaglioLibri(Book $book){
+        
+        return view ('dettaglioLibri', compact('book'));
+        
+    }
    
 
    
