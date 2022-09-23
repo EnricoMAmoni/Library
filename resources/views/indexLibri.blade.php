@@ -6,7 +6,13 @@
 
   <div class="container">
       <div class="row justify-content-evenly">
-         {{-- <div class="col-12 col-md-4"> --}}
+         @if (session('message'))
+        <div class="alert alert-warning">
+            {{ session('message') }}
+        </div>
+        @endif
+        
+         
             @foreach ($books as $book)
                 
             <div class="card col-12 col-md-4 mb-3 mt-3" style="width: 18rem;" >

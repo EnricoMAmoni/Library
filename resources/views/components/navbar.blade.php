@@ -12,7 +12,7 @@
           <li class="nav-item mx-2">
             <a class="nav-link" href="{{route('indexLibri')}}">Catalogo Libri</a>
           </li>
-          <!-- <li class="nav-item mx-2"> -->
+          {{-- <li class="nav-item mx-2"> --}}
 
 
 
@@ -25,9 +25,10 @@
             <a class="nav-link" href="{{route('createLibri')}}">Inserisci Libri</a>
             
             <a class="nav-link" href="{{route('logout')}}" 
-            onclick="event.preventDefault(); 
+                onclick="event.preventDefault(); 
                 document.getElementById('logout-form').submit();">Logout
             </a>
+            <a class="nav-link userPageLink" href="{{route('userPage')}}">{{Auth::user()->name}}</a>
             @endguest
 
             <form method="POST" class="d-none" id="logout-form" action="{{ route('logout') }}">
@@ -35,7 +36,7 @@
             </form>
           
 
-          <!-- </li> -->
+          {{-- </li> --}}
         </ul>
       </div>
     </div>

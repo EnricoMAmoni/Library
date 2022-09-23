@@ -47,8 +47,34 @@ class LibriController extends Controller
         
     }
 
-    
-   
+    public function viewEditLibri(Book $book){
+        
+        return view ('editLibri', compact('book'));
+        
+    }
 
+    public function editLibri(Book $book, LibriRequest $request){
+        if($request->img){
+            $book->update([
+            'title'=>$request->title,
+            'author'=>$request->author,
+            'category'=>$request->category,
+            'year'=>$request->year,
+            'price'=>$request->price,
+            'synopsis'=>$request->synopsis,
+            'img'=>$request->file('img')->store('public/media'),
+            ]);
+        }else{
+            $book->update([
+            'title'=>$request->title,
+            'author'=>$request->author,
+            'category'=>$request->category,
+            'year'=>$request->year,
+            'price'=>$request->price,
+            'synopsis'=>$request->synopsis,
+        ]);   
+        }
+        return redirect(route('indexLibri'))->with('message','Libro aggiornato!');
+    }
    
 }

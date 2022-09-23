@@ -10,6 +10,11 @@
                     <h5>Anno di pubblicazione: {{$book->year}}</h5>
                     <h5>Prezzo: {{$book->price}}</h5>
                     <p>{{$book->synopsis}}</p>
+                    @if(Auth::check())
+                    <a href="{{route('viewEditLibri', compact('book'))}}"><button href="" class="btn bntCreateLibri">Modifica</button></a>
+                    @endif
+                    
+                    
                     
 
                 </div>
