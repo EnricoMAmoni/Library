@@ -8,6 +8,13 @@ use App\Http\Requests\LibriRequest;
 
 class LibriController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth')->except(
+           'indexLibri', 'dettaglioLibri'
+        );
+    }
+
     public function createLibri(){
         return view('createLibri');
     }
@@ -39,6 +46,8 @@ class LibriController extends Controller
         return view ('dettaglioLibri', compact('book'));
         
     }
+
+    
    
 
    

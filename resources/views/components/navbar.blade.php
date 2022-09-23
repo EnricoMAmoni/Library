@@ -12,9 +12,30 @@
           <li class="nav-item mx-2">
             <a class="nav-link" href="{{route('indexLibri')}}">Catalogo Libri</a>
           </li>
-          <li class="nav-item mx-2">
+          <!-- <li class="nav-item mx-2"> -->
+
+
+
+
+            @guest
+            <a class="nav-link" href="{{route('login')}}">Login</a>
+            
+            <a class="nav-link" href="{{route('register')}}">Registrati</a>
+            @else
             <a class="nav-link" href="{{route('createLibri')}}">Inserisci Libri</a>
-          </li>
+            
+            <a class="nav-link" href="{{route('logout')}}" 
+            onclick="event.preventDefault(); 
+                document.getElementById('logout-form').submit();">Logout
+            </a>
+            @endguest
+
+            <form method="POST" class="d-none" id="logout-form" action="{{ route('logout') }}">
+            @csrf
+            </form>
+          
+
+          <!-- </li> -->
         </ul>
       </div>
     </div>

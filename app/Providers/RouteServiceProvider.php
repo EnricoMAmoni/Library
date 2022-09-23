@@ -17,7 +17,11 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
+    public const HOME = '/';
+    
+    protected function redirectTo(){
+    return redirect()->route('/')->with('message', 'Accesso Effettuato');
+    }
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
