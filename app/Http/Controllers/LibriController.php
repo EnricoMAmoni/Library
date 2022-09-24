@@ -76,5 +76,14 @@ class LibriController extends Controller
         }
         return redirect(route('indexLibri'))->with('message','Libro aggiornato!');
     }
-   
+
+
+    public function destroy(Book $book){
+       
+        $book->delete();
+
+        return redirect(route('indexLibri'));
+    }
+
+ 
 }

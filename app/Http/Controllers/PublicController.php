@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
@@ -9,8 +10,10 @@ class PublicController extends Controller
     public function welcome() {
         return view('welcome');
     }
-    public function userPage() {
-        return view('userPage');
+    
+    public function userPage(Book $book) {
+        $books = Book::all();
+        return view('userPage', compact('books'));
     }
 
 

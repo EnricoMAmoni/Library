@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-4 col-lg-4">
-                <h1>Accedi</h1>
+                <h1 class="mt-3 mb-3">Accedi</h1>
                 <form method="POST" action="{{route('login')}}">
                     @csrf
                   

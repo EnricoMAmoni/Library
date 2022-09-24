@@ -23,5 +23,6 @@ Route::get('inserimentoLibri/index/{book}',[LibriController::class, 'dettaglioLi
 Route::get('/inserimentoLibri/viewEditLibri/{book}',[LibriController::class, 'viewEditLibri'])->name('viewEditLibri');
 Route::put('/inserimentoLibri/editLibri/{book}',[LibriController::class, 'editLibri'])->name('editLibri');
 Route::get('/userPage',[PublicController::class, 'userPage'])->name('userPage');
+Route::delete('/inserimentoLibri/index/{book}', [LibriController::class, 'destroy'])->name('destroy');
 
 
