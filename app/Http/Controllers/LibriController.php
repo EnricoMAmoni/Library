@@ -91,7 +91,23 @@ class LibriController extends Controller
         $books = Auth::user()->books()->get();
         return view('userPage', compact('books'));
     }
+    
+    public function storeUser(Request $request){
+       
+        $userProfile = Auth::user();
+        $userProfile->userProfile()->create([
+            'name'=>$request->input('name'),
+            'surname'=>$request->input('surname'),
+            'email'=>Auth::user()->email,
+            'address'=>$request->input('address'),
+            'birthdate'=>$request->input('birthdate'),
+            'profilepicture'=>$request->file('profilepicture')->store('public/media'),
+            
+        ]);
+        
+        return redirect(route('createLibri'))->with('message', 'Libro inserito');
 
 
  
+}
 }

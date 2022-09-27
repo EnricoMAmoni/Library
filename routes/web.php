@@ -24,5 +24,5 @@ Route::get('/inserimentoLibri/viewEditLibri/{book}',[LibriController::class, 'vi
 Route::put('/inserimentoLibri/editLibri/{book}',[LibriController::class, 'editLibri'])->name('editLibri');
 Route::get('/userPage',[LibriController::class, 'userPage'])->name('userPage');
 Route::delete('/inserimentoLibri/index/{book}', [LibriController::class, 'destroy'])->name('destroy');
-
+Route::post('/datiUtente/post',[LibriController::class, 'storeUser'])->name('postStoreUser');
 
