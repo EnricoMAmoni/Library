@@ -11,11 +11,7 @@ class PublicController extends Controller
         return view('welcome');
     }
     
-    public function userPage(Book $book) {
-        $books = Book::all();
-        return view('userPage', compact('books'));
-    }
-
+    
 
    
 }

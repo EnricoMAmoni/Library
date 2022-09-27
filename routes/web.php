@@ -22,7 +22,7 @@ Route::get('/inserimentoLibri/index', [LibriController::class, 'indexLibri'])->n
 Route::get('inserimentoLibri/index/{book}',[LibriController::class, 'dettaglioLibri'] )->name('dettaglioLibri');
 Route::get('/inserimentoLibri/viewEditLibri/{book}',[LibriController::class, 'viewEditLibri'])->name('viewEditLibri');
 Route::put('/inserimentoLibri/editLibri/{book}',[LibriController::class, 'editLibri'])->name('editLibri');
-Route::get('/userPage',[PublicController::class, 'userPage'])->name('userPage');
+Route::get('/userPage',[LibriController::class, 'userPage'])->name('userPage');
 Route::delete('/inserimentoLibri/index/{book}', [LibriController::class, 'destroy'])->name('destroy');
 
 

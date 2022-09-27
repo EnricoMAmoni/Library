@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use Illuminate\Http\Request;
 use App\Http\Requests\LibriRequest;
+use Illuminate\Support\Facades\Auth;
 
 class LibriController extends Controller
 {
@@ -20,7 +21,8 @@ class LibriController extends Controller
     }
 
     public function storeLibri(LibriRequest $request){
-        $books = Book::create([
+        $user = Auth::user();
+        $user->books()->create([
             'title'=>$request->input('title'),
             'author'=>$request->input('author'),
             'category'=>$request->input('category'),
@@ -84,6 +86,12 @@ class LibriController extends Controller
 
         return redirect(route('indexLibri'));
     }
+
+    public function userPage() {
+        $books = Auth::user()->books()->get();
+        return view('userPage', compact('books'));
+    }
+
 
  
 }

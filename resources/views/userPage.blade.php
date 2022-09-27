@@ -3,9 +3,10 @@
     <p>{{Auth::user()->email}}</p>
 
 
-    @foreach ($books as $book)
+   
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-evenly">
+          @foreach ($books as $book)
             <div class="card col-12 col-md-4 mb-3 mt-3" style="width: 18rem;">
                 <img src="{{Storage::url($book->img)}}" class="card-img-top" alt="libri">
                 <div class="card-body">
@@ -54,12 +55,12 @@
                     
                 </div>
             </div>
-            
+            @endforeach  
             
         </div>
         
         
     </div>
-    @endforeach                
+                  
 
 </x-layout>
