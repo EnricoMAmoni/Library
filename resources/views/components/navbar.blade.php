@@ -15,20 +15,21 @@
         
         @guest
         <li>
-          <a class="nav-link" href="{{route('createLibri')}}">Inserisci Libri</a>
-        </li>
-        <li>
           <div class="dropdown dropstart">
-             <a class="bi bi-person-circle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="bi bi-person-circle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             </a>
-             <ul class="dropdown-menu">
+            <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
               <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
             </ul>
           </div>
-         
+          
         </li>
         @else
+          <li>
+            <a class="nav-link" href="{{route('createLibri')}}">Inserisci Libri</a>
+          </li>
+        
         <li>
           <a class="nav-link" href="{{route('logout')}}" 
            onclick="event.preventDefault(); 

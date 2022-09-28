@@ -20,6 +20,7 @@ class LibriController extends Controller
 
     public function createLibri(){
         $categories = Category::all();
+        // dd($categories->all());
         return view('createLibri', compact('categories'));
     }
 
@@ -29,7 +30,7 @@ class LibriController extends Controller
         $book=Auth::user()->books()->create([
             'title'=>$request->input('title'),
             'author'=>$request->input('author'),
-            'category'=>$request->input('category'),
+            // 'category'=>$request->input('category'),
             'year'=>$request->input('year'),
             'price'=>$request->input('price'),
             'synopsis'=>$request->input('synopsis'),
@@ -87,6 +88,8 @@ class LibriController extends Controller
     public function destroy(Book $book){
        
         $book->delete();
+        $book->categories()->detach();
+        $book->user()->disassociate();
 
         return redirect(route('indexLibri'));
     }

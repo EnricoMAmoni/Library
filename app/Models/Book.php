@@ -14,7 +14,7 @@ class Book extends Model
     protected $fillable = [
         'title',
         'author',
-        'category',
+        'category', //!!!!!!!va tolto?
         'year',
         'price',
         'synopsis',

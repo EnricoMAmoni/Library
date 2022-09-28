@@ -26,7 +26,7 @@ class LibriRequest extends FormRequest
         return [
             'title'=>'required',
             'author'=>'required',
-            'category'=>'required',
+            // 'category'=>'required',
             'year'=>'required',
             'price'=>'required',
             'synopsis'=>'required',
@@ -36,7 +36,7 @@ class LibriRequest extends FormRequest
         return[
             'title.required'=>'Devi inserire il titolo!',
             'author.required'=>'Devi inserire l\'autore!',
-            'category.required'=>'Devi inserire la categoria!',
+            // 'category.required'=>'Devi inserire la categoria!',
             'year.required'=>'Devi inserire l\'anno!',
             'price.required'=>'Devi inserire il prezzo!',
             'synopsis.required'=>'Devi inserire la sinossi!'

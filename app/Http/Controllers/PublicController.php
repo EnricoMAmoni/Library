@@ -11,6 +11,10 @@ class PublicController extends Controller
         return view('welcome');
     }
     
+    public function userDetail() {
+        return view('userDetail');
+    }
+    
     
 
    

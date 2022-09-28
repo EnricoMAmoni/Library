@@ -10,6 +10,14 @@
                <h5>Anno di pubblicazione: {{$book->year}}</h5>
                <h5>Prezzo: {{$book->price}}</h5>
                <p>{{$book->synopsis}}</p>
+
+               @foreach ($book->categories as $category)
+               <p>
+                  {{$category->name}}
+               </p>
+                   
+               @endforeach
+
                @if( $book->user_id == null )
                @else
 
