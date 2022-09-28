@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\LibriRequest;
 use Illuminate\Support\Facades\Auth;
@@ -17,12 +19,14 @@ class LibriController extends Controller
     }
 
     public function createLibri(){
-        return view('createLibri');
+        $categories = Category::all();
+        return view('createLibri', compact('categories'));
     }
 
     public function storeLibri(LibriRequest $request){
         $user = Auth::user();
-        $user->books()->create([
+       
+        $book=Auth::user()->books()->create([
             'title'=>$request->input('title'),
             'author'=>$request->input('author'),
             'category'=>$request->input('category'),
@@ -31,7 +35,7 @@ class LibriController extends Controller
             'synopsis'=>$request->input('synopsis'),
             'img'=>$request->file('img')->store('public/media'),
         ]);
-        
+        $book->categories()->attach($request->categories);
         return redirect(route('createLibri'))->with('message', 'Libro inserito');
 
     }

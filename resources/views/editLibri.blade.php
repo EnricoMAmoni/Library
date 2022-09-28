@@ -23,10 +23,10 @@
                         <label class="form-label">Autore</label>
                         <input placeholder="Inserisci l'autore del libro" class="form-control" name="author" value="{{$book->author}}">
                     </div>
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label class="form-label">Categoria</label>
                         <input placeholder="Inserisci la categoria" class="form-control" name="category" value="{{$book->category}}">
-                    </div>
+                    </div> -->
                     <div class="mb-3">
                         <label class="form-label">Anno di pubblicazione</label>
                         <input placeholder="Inserisci l'anno di pubblicazione" class="form-control" name="year" value="{{$book->year}}">
