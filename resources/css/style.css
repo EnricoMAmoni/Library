@@ -18,12 +18,19 @@
 .nav-link:hover{
     color: #A22C29;
 }
-/* .userPageLink{
-    
+.userPageLink{
+    position: absolute;
+    right: 2%;
 }
-ul:last-child{
-    margin-left: auto;
-} */
+.bi-person-circle{
+    color: #D6D5C9;
+    font-size: 35px;
+    text-decoration: none;
+}
+.dropdown{
+    position: absolute;
+    right: 2%;
+}
 
 /* body */
 body{
