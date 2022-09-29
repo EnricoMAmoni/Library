@@ -50,3 +50,8 @@ h1{
 .bntCreateLibri:hover{
     background-color: #A22C29 !important;
 }
+
+/* form review */
+.dimensioneFormReview{
+    height: 60vh;
+}

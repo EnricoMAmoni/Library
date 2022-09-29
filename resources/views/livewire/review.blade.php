@@ -1,16 +1,17 @@
-<x-layout>
-      
-    <form>
-        <div class="mb-3">
-          <label class="form-label">Titolo del libro</label>
-          <input type="" class="form-control" >
-        </div>
-        <div class="mb-3">
-          <label  class="form-label">Recensione</label>
-          <input type="" class="form-control" >
-        </div>
-        <button type="submit" class="btn btn-primary">Invia</button>
-    </form>
-    
 
-</x-layout>
+
+<form wire:submit.prevent="createReview">
+      <div class="mb-3">
+        <label class="form-label">Titolo recensione</label>
+        <input type="text" class="form-control" wire:model="title">
+      </div>
+          <div class="mb-3">
+          <label for="customRange3" class="form-label">Punteggio</label>
+        <input type="range" class="form-range" min="0" max="5" step="1" wire:model="score">
+      </div>
+          <div class="mb-3">
+          <label  class="form-label">Recensione</label>
+          <textarea type="text" class="form-control" wire:model="review"></textarea>
+      </div>
+      <button class="btn btn-primary" >Invia</button>
+</form>

@@ -1,5 +1,6 @@
 <x-layout>
-    <h1>La nostra libreria</h1>
+    <h1 class="vh-100">La nostra libreria</h1>
+
     <!-- @if (session('status'))
     <div class="alert alert-success">
         {{ session('status') }}

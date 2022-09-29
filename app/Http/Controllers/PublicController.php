@@ -14,6 +14,10 @@ class PublicController extends Controller
     public function userDetail() {
         return view('userDetail');
     }
+
+    public function viewFromRecensioni(){
+        return view('insFormReview');
+    }
     
     
 

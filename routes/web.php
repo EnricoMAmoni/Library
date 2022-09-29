@@ -26,5 +26,6 @@ Route::get('/userPage',[LibriController::class, 'userPage'])->name('userPage');
 Route::delete('/inserimentoLibri/index/{book}', [LibriController::class, 'destroy'])->name('destroy');
 Route::post('/datiUtente/post',[LibriController::class, 'storeUser'])->name('postStoreUser');
 Route::get('/userDetail',[PublicController::class, 'userDetail'])->name('userDetail');
+Route::get('/inserisciRecensione',[PublicController::class, 'viewFromRecensioni'])->name('formReview');
 
 
