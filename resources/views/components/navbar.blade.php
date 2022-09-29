@@ -12,6 +12,9 @@
         <li class="nav-item mx-2">
           <a class="nav-link" href="{{route('indexLibri')}}">Catalogo Libri</a>
         </li>
+        <li>
+          <a class="nav-link" href="{{route('indexReview')}}">Dicono di noi</a>
+        </li>
         
         @guest
         <li>

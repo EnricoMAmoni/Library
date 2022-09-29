@@ -55,3 +55,10 @@ h1{
 .dimensioneFormReview{
     height: 60vh;
 }
+
+
+/* Recensioni */
+
+.delete{
+   width: fit-content;
+}

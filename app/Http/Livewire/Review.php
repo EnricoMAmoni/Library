@@ -15,8 +15,19 @@ class Review extends Component
     public $review;
     public $score;
 
+    protected $rules = [
+        'title' => 'required|min:5|max:30',
+        'review' => 'required|min:5',
+        'score' => 'required',
+
+    ];
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
     /* funzione per il salvataggio dei dati in tabella */
     public function createReview(){
+        $this->validate();
         enter::create([
             "title"=>$this->title,
             "review"=>$this->review,
@@ -32,7 +43,7 @@ class Review extends Component
         $this->score = "";
     }
 
-    /* mo famo le validation */
+
 
 
     public function render()

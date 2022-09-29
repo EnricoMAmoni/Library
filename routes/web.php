@@ -28,4 +28,6 @@ Route::post('/datiUtente/post',[LibriController::class, 'storeUser'])->name('pos
 Route::get('/userDetail',[PublicController::class, 'userDetail'])->name('userDetail');
 Route::get('/inserisciRecensione',[PublicController::class, 'viewFromRecensioni'])->name('formReview');
 
-
+Route::get('/Recensioni', [PublicController::class, 'viewRecensioni'])->name('indexReview');
+Route::get('/ModificaReview/{review}', [PublicController::class, 'editReview'])->name('editReview');
+   

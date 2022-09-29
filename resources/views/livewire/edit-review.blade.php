@@ -1,6 +1,5 @@
-
-
-<form wire:submit.prevent="createReview">
+<div>
+<form wire:submit.prevent="updateReview">
       <div class="mb-3">
         <label class="form-label">Titolo recensione</label>
         <input type="text" class="form-control" wire:model.lazy="title">
@@ -16,4 +15,7 @@
           @error('review') <span class="error">{{$message}}</span> @enderror
       </div>
       <button class="btn btn-primary" >Invia</button>
+      
 </form>
+
+</div>
