@@ -1,5 +1,5 @@
 <x-layout>
     <div class="container">
         <livewire:review-index/>
-       </div>
+    </div>
 </x-layout>

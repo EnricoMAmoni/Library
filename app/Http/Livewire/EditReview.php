@@ -28,7 +28,7 @@ class EditReview extends Component
             'score' => $this -> score,
         ]);
 
-        return redirect()->route('allReview');
+        return redirect(route('indexReview'));
     }
 
 

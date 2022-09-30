@@ -15,7 +15,6 @@
           @error('review') <span class="error">{{$message}}</span> @enderror
       </div>
       <button class="btn btn-primary" >Invia</button>
-      
 </form>
 
 </div>

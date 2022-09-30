@@ -26,8 +26,7 @@ class PublicController extends Controller
     }
 
     public function editReview (Review $review){
-
-        return view ('allReview', compact('review'));
+        return view ('editReview', compact('review'));
     }
     
     
